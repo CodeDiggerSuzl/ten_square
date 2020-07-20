@@ -1,5 +1,5 @@
 # 十次方前端
-## 1. Day 1
+## 1. Day 1 Node/Npm/webpack/ES6
 
 <details> <summary>Note</summary>
 
@@ -97,5 +97,14 @@ npm install webpack-cli -g
 - import & export
 - Promise
 
+
+</details>
+
+
+## 2. Day 2 REST/swagger/mock.js/easy mock
+- RESTful(表现层状态转化)
+- swagger 编写文档
+-
+<details> <summary>Note</summary>
 
 </details>
