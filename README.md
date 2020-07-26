@@ -125,4 +125,10 @@ npm install webpack-cli -g
 
 ### EasyMock
 使用+本地部署
+
+## 3. ELement UI 进行开发
+- 查看 Vue-element-admin的文档
+
+## 4. 路由和转态管理
+
 </details>
