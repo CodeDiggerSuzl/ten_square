@@ -107,4 +107,22 @@ npm install webpack-cli -g
 -
 <details> <summary>Note</summary>
 
+### 1. RESTFUL
+(Resource)Representational State Transfer : 资源的表现层状态转化
+
+### 2. Swagger
+1. 下载 swagger-editor
+2. 下载 http-server :`npm install -g http-server`
+3. 使用 http-server 运行该文件夹: `http-server dir`
+#### SwaggerUI
+1. 本地安装 nginx
+2. 下载 swaggerUI [源码](https://swagger.io/download-swagger-ui/)
+3. 解压,将 dist 放到 nginx 的 html 目录中
+4. 启动 nginx
+5. 浏览 localhost
+
+### Mock.js
+
+### EasyMock
+使用+本地部署
 </details>
