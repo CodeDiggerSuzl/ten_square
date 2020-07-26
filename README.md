@@ -104,7 +104,7 @@ npm install webpack-cli -g
 ## 2. Day 2 REST/swagger/mock.js/easy mock
 - RESTful(表现层状态转化)
 - swagger 编写文档
--
+
 <details> <summary>Note</summary>
 
 ### 1. RESTFUL
@@ -126,9 +126,91 @@ npm install webpack-cli -g
 ### EasyMock
 使用+本地部署
 
+</details>
+
 ## 3. ELement UI 进行开发
 - 查看 Vue-element-admin的文档
 
 ## 4. 路由和转态管理
+- router of vue
+- Vuex 状态管理
+
+<details> <summary>Note</summary>
+
+### 4.1 路由基础
+vue-router 是 vue 官方提供的路由框架,可以通过组合组件来组成应用程序,将组件映射到路由(routers),然后告诉路由在哪里渲染他们.
+
+单页面路由:
+文件 `router/index.js`
+```js
+import Vue from 'vue'
+import Router from 'vue-router'
+import HelloWorld from '@/components/HelloWorld'
+
+Vue.use(Router) // use router ,config the router on
+
+export default new Router({
+	routes: [
+		{
+			path: '/',
+			name: 'HelloWorld',
+			component: HelloWorld
+		}
+	]
+})
+```
+App.vue 文件
+```html
+<template>
+  <div id="app">
+    <img src="./assets/logo.png">
+    <router-view/> <!-- 路由视图 -->
+  </div>
+</template>
+```
+
+main.js 主入口
+```js
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+//
+Vue.config.productionTip = false
+
+/* eslint-disable no-new */
+new Vue({ // 一个对象
+  el: '#app',
+  router, // 路由
+  components: { App }, // 零件
+  template: '<App/>'
+})
+```
+
+### 4.2 `<router-link>`标签的使用
+`<router-link to="/">首页</router-link>` to 后面对应的就是 router 中定义的路由位置.
+
+### 4.3 动态路由
+
+一个『路径参数』使用冒号 `:` 标记。当匹配到一个路由时，参数值会被设置
+到 `this.$route.params`
+
+路由文件中
+```js
+{
+	path: '/item/:id',
+    name: 'Item',
+    component: Item
+}
+
+// 获取路由:
+<div>Got the params: {{ $route.params.id }}</div>
+```
+
+### 4.3 嵌套路由
+
+### 4.4 状态管理 Vuex
+每个组件都有它自己数据属性，封装在`data()`中，每个组件之间`data`是完全隔 离的，是私有的。如果我们需要各个组件都能访问到数据数据，或是需要各个组件之间 能互相交换数据，这就需要一个单独存储的区域存放公共属性。这就是状态管理所要解 决的问题。
+
+每一个 Vuex 应用的核心就是 `store(仓库)`。“store”基本上就是一个容器，它包含着你的应用中大部分的状态 (state)。
 
 </details>
